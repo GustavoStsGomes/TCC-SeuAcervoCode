@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">		    
+
+		    
+	<h:head>
+    	<title>SeuAcervo</title>
+	</h:head> 
+  
+	<h:body style="background-image:url(imagens/liv.jpg)">	
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="painel" header="Login de Usuario" style="text-align: center;">
+		        <h:panelGrid columns="2" cellpadding="10" style="text-align:center; padding-right: 30%; padding-left: 30%;">
+		        	
+		        	<h:outputLabel value =""/>	
+		        	<img src="imagens/logo2.png" style="width:300px;"/>
+		 				 				
+			  		<h:outputLabel value = "E-mail" />
+			  		<p:inputText value = "#{usuarioControle.usuario.email}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Senha" />
+			  		<p:password value = "#{usuarioControle.usuario.senha}" maxlength="50"/>
+			  		
+			  		
+			  		<p:commandButton value = "Entrar" action ="#{usuarioControle.logar()}" update="@form">
+			  			<p:resetInput target="painel"/>			  		
+			  		</p:commandButton>
+			  		
+			  		<p:commandButton value = "Novo Usuario" action ="#{usuarioControle.novoUsuario()}" update="@form">
+			  			<p:resetInput target="painel"/>			  		
+			  		</p:commandButton>
+				            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

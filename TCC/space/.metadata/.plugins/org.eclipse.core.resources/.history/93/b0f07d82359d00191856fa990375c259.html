@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Usuario</title>
+	</h:head> 
+  
+	<h:body>
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Usuarios">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        	
+		        	<h:outputLabel value =""/>	
+		        	<img src="imagens/logo2.png" style="width:300px;"/>
+		        
+		        	<h:outputLabel value = "Foto de Perfil" />
+		        	<p:fileUpload id="fileUpload"
+					fileUploadListener="#{UploadTeste.upArquivo}"
+					label="Escolher" uploadLabel="Enviar"
+					cancelLabel="Cancelar" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+					invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+					fileLimit="1"
+					fileLimitMessage="Só é possível escolher 1 arquivo por vez."
+					multiple="false" auto="true"/>	
+		  				  		
+			  		<h:outputLabel value = "Nome" />
+			  		<p:inputText value = "#{usuarioControle.usuario.nome}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "E-mail" />
+			  		<p:inputText value = "#{usuarioControle.usuario.email}" maxlength="50" />			  		
+			  		
+			  		<h:outputLabel value = "Tipo" />
+			  		<p:inputText value = "#{usuarioControle.usuario.tipo}" maxlength="15"/>
+			  		
+			  		<h:outputLabel value = "Senha" />
+			  		<p:password value = "#{usuarioControle.usuario.senha}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Telefone" />
+			  		<p:inputMask id="phone" value = "#{usuarioControle.usuario.telefone}" 
+			  		mask="(99) 9999-9999" maxlength="15"/>
+			  		
+			  		<h:outputLabel value = "Logradouro" />
+			  		<p:inputText value = "#{usuarioControle.usuario.logradouro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Bairro" />
+			  		<p:inputText value = "#{usuarioControle.usuario.bairro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Numero" />
+			  		<p:inputText value = "#{usuarioControle.usuario.numero}" maxlength="50"/>	 
+				    	  		
+			  		<h:outputLabel  value="Cidade" />				 	
+				 	<p:selectOneMenu id="advanced" value="#{usuarioControle.cidade}" converter="cidadeConverter" panelStyle="width:180px"
+                         effect="fade" var="c" style="width:200px" filter="true" filterMatchMode="startsWith">
+			            <f:selectItems value="#{usuarioControle.carregaCidade()}" var="cidade" itemLabel="#{cidade.nome}" itemValue="#{cidade}"/>  
+			            <p:column>
+			                <h:outputText value="#{c.nome}" />
+			            </p:column>
+			        </p:selectOneMenu>
+				 						        					  		
+			  		<p:commandButton value = "Salvar" action ="#{usuarioControle.inserirUsuario()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{usuarioControle.cancelar()}" update="@form"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Lista de Livro">
+	    	
+	    	<p:dataTable var="us" value="#{usuarioControle.listaUsuario}" dynamic="true" rows="10" paginator="true"
+           		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                rowsPerPageTemplate="5,10,15" widgetVar="livTable"
+                 emptyMessage="Nenhuma resposta pra pesquisa">
+	    	
+	    		<p:column headerText="Nome" filterBy="#{us.nome}" filterMatchMode="contains">
+	    			<h:outputText value="#{us.nome}"> </h:outputText>
+	    		</p:column>
+	    		
+	    		<p:column headerText="E-mail" filterBy="#{us.email}" filterMatchMode="contains">
+	    			<h:outputText value="#{us.email}"> </h:outputText>
+	    		</p:column>	 
+	    		
+	    		<p:column headerText="Tipo">
+	    			<h:outputText value="#{us.tipo}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Telefone">
+	    			<h:outputText value="#{us.telefone}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Cidade">
+	    			<h:outputText value="#{us.cidade.nome}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Alterar">
+	    			<p:commandButton icon="ui-icon-pensil" 
+	    							action="#{usuarioControle.carregaFormulario(us)}"
+	    							update="@form">
+	    				
+	    			</p:commandButton>
+	    		</p:column> 
+	    		
+	    		<p:column headerText="Excluir">
+	    			<p:commandButton icon="ui-icon-trash"
+	    							action="#{usuarioControle.excluirUsuario(us)}"
+	    							update="@form">
+	    			</p:commandButton>
+	    		</p:column>   		
+	    		   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

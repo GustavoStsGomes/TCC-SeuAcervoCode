@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Categorias</title>
+	</h:head> 
+  
+	<h:body>
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Categoria">
+		        <h:panelGrid columns="2" cellpadding="10">
+		      		  		  		
+			  		<h:outputLabel value = "Descricao" />
+			  		<p:inputText value = "#{categoriasControle.categorias.descricao}" maxlength="40"/>
+			  				  		
+			  		<p:commandButton value = "Salvar" action ="#{categoriasControle.inserirCategorias()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{categoriasControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Estados Cadastrados">
+	    	
+	    	<p:dataTable var="cat" value="#{categoriasControle.listaCategorias}" dynamic="true">
+	    	
+	    		<p:column headerText="Descricao">
+	    			<h:outputText value="#{cat.descricao}"> </h:outputText>
+	    		</p:column>
+    		
+	    		<p:column headerText="Alterar">
+	    			<p:commandButton icon="ui-icon-pensil" 
+	    							action="#{categoriasControle.carregaFormulario(cat)}"
+	    							update="@form">
+	    				
+	    			</p:commandButton>
+	    		</p:column> 
+	    		
+	    		<p:column headerText="Excluir">
+	    			<p:commandButton icon="ui-icon-trash"
+	    							action="#{categoriasControle.excluirCategorias(cat)}"
+	    							update="@form">
+	    			</p:commandButton>
+	    		</p:column>   		
+	    		   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

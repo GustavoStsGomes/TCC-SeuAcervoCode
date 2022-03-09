@@ -1,0 +1,30 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">	 		
+	  	<h:form id="formulario">			
+			<p:dataGrid var="liv" value="#{livrosPorCategoriasControle.listaLivro}" columns="3" layout="grid"
+			        rows="10" paginator="true" id="cars"
+			        paginatorTemplate="{CurrentPageReport} {PageLinks} {RowsPerPageDropdown}"
+			        rowsPerPageTemplate="5,10,15">
+			        			         			 
+			        <p:panel header="#{liv.livro.titulo}" style="text-align:center">
+			            <h:panelGrid columns="1" style="width:100%; text-align:center">
+			                <img src="imagens/#{liv.livro.capa}" style="width:125px;"/>
+			                 		 
+			                <h:outputText value="#{liv.livro.autor}" />
+			 				<p:commandButton value ="Detalhe" icon="ui-icon-pensil" action ="#{livrosPorCategoriasControle.comentario(liv)}"></p:commandButton>
+			 				<p:commandButton value ="Remover" icon="ui-icon-trash" action ="#{livrosPorCategoriasControle.excluirArmarios(liv)}" update="@form"></p:commandButton>
+			            </h:panelGrid>
+			        </p:panel>
+			 
+			</p:dataGrid>		
+		</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

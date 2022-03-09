@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Editora</title>
+	</h:head> 
+  
+	<h:body>
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Editoras">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        		        
+		        	<h:outputLabel value = "Imagem" />
+		        	<p:fileUpload id="fileUpload"
+					fileUploadListener="#{UploadTeste.upArquivo}"
+					label="Escolher" uploadLabel="Enviar"
+					cancelLabel="Cancelar" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+					invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+					fileLimit="1"
+					fileLimitMessage="Só é possível escolher 1 arquivo por vez."
+					multiple="false" auto="true"/>	
+		  				  			 
+		  			<h:outputLabel value = "Nome" /> 
+			  		<p:inputText value = "#{editoraControle.editora.nome}" maxlength="40"/>
+			  		
+			  		<h:outputLabel value = "Descricao" />
+			  		<p:inputTextarea value = "#{editoraControle.editora.descricao}" rows="1" cols="22" maxlength="400"/>
+			  				  		
+			  		<p:commandButton value = "Salvar" action ="#{editoraControle.inserirEditora()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{editoraControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+			<p:panel id="grid" header="Editoras" style="margin-bottom:20px" >
+			
+		        <p:dataTable var="ed" value="#{editoraControle.listaEditora}" dynamic="true" rows="10" paginator="true"
+           		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                rowsPerPageTemplate="5,10,15" widgetVar="cidTable"
+                 emptyMessage="Nenhuma resposta pra pesquisa">
+		    	
+			    	<p:column headerText="Nome" filterBy="#{ed.nome}" filterMatchMode="contains">
+		    			<h:outputText value="#{ed.nome}"> </h:outputText>
+		    		</p:column>
+		    		
+		    		<p:column headerText="Alterar">
+		    			<p:commandButton icon="ui-icon-pensil" 
+		    							action="#{editoraControle.carregaFormulario(ed)}"
+		    							update="@form">	    				
+		    			</p:commandButton>
+		    		</p:column> 
+		    		
+		    		<p:column headerText="Excluir">
+		    			<p:commandButton icon="ui-icon-trash"
+		    							action="#{editoraControle.excluirEditora(ed)}"
+		    							update="@form">
+		    			</p:commandButton>
+		    		</p:column>   		
+	    		   	
+	    	</p:dataTable> 
+		        
+		    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">
+			<h:form id="formulario">
+				<p:panel id="visual" header="#{perfilControle.usuario.nome}">
+					<h:panelGrid columns="2" cellpadding="10">
+	
+						<img src="imagens/#{perfilControle.usuario.perfil}" style="width: 125px; height: 175px;" />
+	
+						<h:panelGrid columns="1" cellpadding="10">
+							<h:outputText value="#{perfilControle.usuario.email}" />
+							<h:outputText value="#{perfilControle.usuario.cidade}" />
+							<h:outputText value="#{perfilControle.usuario.telefone}" />
+						</h:panelGrid>
+	
+					</h:panelGrid>
+				</p:panel>
+	
+				<p:panel id="basic" header="Alterar Cadastro">
+					<h:panelGrid columns="2" cellpadding="10">
+	
+						<h:outputLabel value="Foto de Perfil" />
+						<p:fileUpload id="fileUpload"
+							fileUploadListener="#{UploadTeste.upArquivo}" label="Escolher"
+							uploadLabel="Enviar" cancelLabel="Cancelar"
+							allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+							invalidFileMessage="Permitidas somente imagens (gif, jpeg, jpg e png)"
+							fileLimit="1"
+							fileLimitMessage="escolha somente 1 arquivo por vez."
+							multiple="false" auto="true" />
+	
+						<h:outputLabel value="Telefone" />
+						<p:inputMask id="phone" value="#{perfilControle.usuario.telefone}"
+							mask="(99) 9999-9999" maxlength="15" />
+	
+						<h:outputLabel value="Logradouro" />
+						<p:inputText value="#{perfilControle.usuario.logradouro}"
+							maxlength="50" />
+	
+						<h:outputLabel value="Bairro" />
+						<p:inputText value="#{perfilControle.usuario.bairro}" maxlength="50" />
+	
+						<h:outputLabel value="Numero" />
+						<p:inputText value="#{perfilControle.usuario.numero}" maxlength="50" />
+	
+						<h:outputLabel value="Cidade" />
+						<p:selectOneMenu id="advanced" value="#{perfilControle.cidade}"
+							converter="cidadeConverter" panelStyle="width:180px" effect="fade"
+							var="c" style="width:200px" filter="true"
+							filterMatchMode="startsWith">
+							<f:selectItems value="#{usuarioControle.carregaCidade()}"
+								var="cidade" itemLabel="#{cidade.nome}" itemValue="#{cidade}" />
+							<p:column>
+								<h:outputText value="#{c.nome}" />
+							</p:column>
+						</p:selectOneMenu>
+	
+						<p:commandButton value="Alterar"
+							action="#{perfilControle.alterarUsuario()}" update="@form"></p:commandButton>
+							
+						<br />	
+						<p:messages id="messages" closable="true">
+						</p:messages>
+	
+					</h:panelGrid>
+				</p:panel>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

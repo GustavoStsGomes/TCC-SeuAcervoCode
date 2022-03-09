@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menu.xhtml"></ui:decorate>
+
+		    
+	<h:head>
+    	<title>Usuarios</title>
+	</h:head> 
+  
+	<h:body>	
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Usuarios">
+		        <h:panelGrid columns="2" cellpadding="10">
+		  				  		
+			  		<h:outputLabel value = "Nome" />
+			  		<p:inputText value = "#{usuarioControle.usuario.nome}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "E-mail" />
+			  		<p:inputText value = "#{usuarioControle.usuario.email}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Tipo" />
+			  		<p:inputText value = "#{usuarioControle.usuario.tipo}" maxlength="15"/>
+			  		
+			  		<h:outputLabel value = "Senha" />
+			  		<p:inputText value = "#{usuarioControle.usuario.senha}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Telefone" />
+			  		<p:inputText value = "#{usuarioControle.usuario.telefone}" maxlength="15"/>
+			  		
+			  		<h:outputLabel value = "Logradouro" />
+			  		<p:inputText value = "#{usuarioControle.usuario.logradouro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Bairro" />
+			  		<p:inputText value = "#{usuarioControle.usuario.bairro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Numero" />
+			  		<p:inputText value = "#{usuarioControle.usuario.numero}" maxlength="50"/>
+			  		
+			  		<h:outputLabel  value="Cidade" />
+			  		<p:autoComplete dropdown="true" value="#{usuarioControle.cidade}"
+				 	completeMethod="#{usuarioControle.carregaCidade()}" converter="cidadeConverter"
+				 	itemValue="#{cidade}" itemLabel="#{cidade.nome}" var="cidade"></p:autoComplete>
+				 	
+				 	<p:outputLabel value="Min Length (3):" for="acMinLength" />
+        			<p:autoComplete id="acMinLength" minQueryLength="3" value="#{usuarioControle.cidade}" 
+        			completeMethod="#{usuarioControle.carregaCidade()}" converter="cidadeConverter"
+				 	itemValue="#{cidade}" itemLabel="#{cidade.nome}" var="cidade" effect="fade" />	
+        			
+        			<p:outputLabel value="DropDown:" for="dd" />
+        			<p:autoComplete id="dd" dropdown="true" value="#{autoCompleteView.txt6}" 
+        			completeMethod="#{autoCompleteView.completeText}" />
+			  		
+			  		<p:commandButton value = "Salvar" action ="#{usuarioControle.inserirUsuario()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{usuarioControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Lista de Livro">
+	    	
+	    	<p:dataTable var="us" value="#{usuarioControle.listaUsuario}" dynamic="true">
+	    	
+	    		<p:column headerText="Nome">
+	    			<h:outputText value="#{us.nome}"> </h:outputText>
+	    		</p:column>
+	    		
+	    		<p:column headerText="E-mail">
+	    			<h:outputText value="#{us.email}"> </h:outputText>
+	    		</p:column>	 
+	    		
+	    		<p:column headerText="Tipo">
+	    			<h:outputText value="#{us.tipo}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Telefone">
+	    			<h:outputText value="#{us.telefone}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Cidade">
+	    			<h:outputText value="#{us.cidade.nome}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Alterar">
+	    			<p:commandButton icon="ui-icon-pensil" 
+	    							action="#{usuarioControle.carregaFormulario(us)}"
+	    							update="@form">
+	    				
+	    			</p:commandButton>
+	    		</p:column> 
+	    		
+	    		<p:column headerText="Excluir">
+	    			<p:commandButton icon="ui-icon-trash"
+	    							action="#{usuarioControle.excluirUsuario(us)}"
+	    							update="@form">
+	    			</p:commandButton>
+	    		</p:column>   		
+	    		   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

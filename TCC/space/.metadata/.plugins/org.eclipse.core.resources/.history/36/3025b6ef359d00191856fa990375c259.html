@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Estado</title>
+	</h:head> 
+  
+	<h:body>  	
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Estados">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        
+		        	<h:outputLabel value =""/>	
+		        	<img src="imagens/logo2.png" style="width:300px;"/>
+		  		
+			  		<h:outputLabel value = "Sigla" />
+			  		<p:inputText value = "#{estadoControle.estado.sigla}" maxlength="2"/>
+			  		
+			  		<h:outputLabel value = "Nome" />
+			  		<p:inputText value = "#{estadoControle.estado.nome}" maxlength="45"/>
+			  				  		
+			  		<p:commandButton value = "Salvar" action ="#{estadoControle.inserirEstado()}" update="@form" oncomlete="#{estadoControle.buscaEstado()}"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{estadoControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Estados Cadastrados">
+	    	
+	    	<p:dataTable var="est" value="#{estadoControle.listaEstado}" rows="10" paginator="true"
+           		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+           		{NextPageLink} {LastPageLink}">
+	    	
+	    		<p:column headerText="Sigla">
+	    			<h:outputText value="#{est.sigla}"> </h:outputText>
+	    		</p:column>
+	    		
+	    		<p:column headerText="Nome" filterBy="#{est.nome}" filterMatchMode="contains">
+	    			<h:outputText value="#{est.nome}"> </h:outputText>
+	    		</p:column>	 
+	    			   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

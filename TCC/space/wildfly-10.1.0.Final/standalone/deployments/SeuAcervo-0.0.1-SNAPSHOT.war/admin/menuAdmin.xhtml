@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+		
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="10">	
+			    <img src="logo2.png" style="width:150px;"/>
+				<p:menubar>
+					<p:menuitem value="Livro" url="livro.xhtml"/>
+						<p:menuitem value="Usuário" url="usuario.xhtml"/>
+						<p:menuitem value="Editora" url="editora.xhtml"/>
+						<p:menuitem value="Categorias" url="categorias.xhtml"/>
+						<p:menuitem value="Armarios" url="armarios.xhtml"/>
+						<p:menuitem value="Avaliação" url="avaliacao.xhtml"/>
+						<p:menuitem value="Cidades" url="cidade.xhtml"/>
+						<p:menuitem value="Estados" url="estado.xhtml"/>
+						<p:menuitem value="Sair" action ="#{usuarioControle.logout()}" update="@form"/>
+				</p:menubar>
+			</h:panelGrid>
+		</h:form>	
+	</h:body>
+</html>

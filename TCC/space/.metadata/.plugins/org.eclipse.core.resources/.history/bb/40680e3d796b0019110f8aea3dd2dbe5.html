@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+  
+	<h:body>
+		<h:form>				  		  	
+		        <h:panelGrid columns="1"  style="width: 100%; text-align:center">
+		        	
+		        	<f:facet name="header">
+				       	<img src="#{perfilControle.usuario.perfil}" style="width:125px; height: 155px;"/>
+				    </f:facet>
+				    
+		       		<h:outputText value="#{perfilControle.usuario.nome}" />
+		       		
+				    <h:outputText value="#{perfilControle.usuario.email}" />
+				     
+				    <h:outputText value="#{perfilControle.usuario.cidade.nome}" />
+				    
+				    <br/>
+	               
+	                <p:commandLink action="#{perfilControle.irMeuPerfil}">
+	                    <h:outputText value="MeuPerfil" style="margin-bottom:0 auto;"/>
+	                </p:commandLink>
+	                
+	                <p:dataList value="#{perfilControle.listaCategorias}" var="cat" type="unordered" itemType="none" style="text-align:left">
+		                <f:facet name="header">
+				            Armarios
+				        </f:facet>
+				        
+				        <p:commandLink action="#{perfilControle.irArmario(cat)}">
+		                    <h:outputText value="#{cat.descricao}" />
+		                    <br/>
+		                </p:commandLink>
+		                
+		                <br/>
+		                
+	                </p:dataList>
+	                
+	               
+	                        
+				    	       			        
+		    	</h:panelGrid>   
+		</h:form>
+	</h:body>
+</html>

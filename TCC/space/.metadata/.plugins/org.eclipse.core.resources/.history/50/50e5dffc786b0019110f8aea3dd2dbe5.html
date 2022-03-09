@@ -1,0 +1,50 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">
+			<h:form id="formulario">
+				<p:panel id="visual" header="#{outPerfilControle.perfil.nome}">
+					<h:panelGrid columns="2" cellpadding="10">
+	
+						<img src="#{outPerfilControle.perfil.perfil}" style="width: 125px; height: 175px;" />
+	
+						<h:panelGrid columns="1" cellpadding="10">
+												
+							<h:outputText value="#{outPerfilControle.perfil.cidade.estado.nome}" />
+							<p:commandButton value ="Enviar E-mail" action ="#{outPerfilControle.irEmail()}">
+			 				</p:commandButton>							
+							
+						</h:panelGrid>
+	
+					</h:panelGrid>
+				</p:panel>
+	
+				<p:dataGrid var="liv" value="#{outPerfilControle.livros}" columns="5" layout="grid"
+			        rows="10" paginator="true" id="cars"
+			        paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+			        {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+			        rowsPerPageTemplate="5,10,15">
+			         
+			        <f:facet name="header">
+			            Favoritos
+			        </f:facet>			 
+			        <p:panel header="#{liv.titulo}" style="text-align:center">
+			            <h:panelGrid columns="1" style="width:100%; text-align:center">
+			                <img src="#{liv.capa}" style="width:125px;"/>
+			                 		 
+			                <h:outputText value="#{liv.autor}" />
+			 				<p:commandButton value ="Detalhe" icon="ui-icon-bookmark" action ="#{livroControle.comentario(liv)}">
+			 				</p:commandButton>
+			            </h:panelGrid>
+			        </p:panel>		 
+				</p:dataGrid>
+				
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

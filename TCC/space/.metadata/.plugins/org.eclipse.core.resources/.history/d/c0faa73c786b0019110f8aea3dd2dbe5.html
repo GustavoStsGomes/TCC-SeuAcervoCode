@@ -1,0 +1,89 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">				  	
+		  	<h:form id="formulario">
+		  		<p:panel id="visual" header="#{comentarioControle.livro.titulo}">
+					<h:panelGrid columns="2" cellpadding="10">
+					
+						<img src="#{comentarioControle.livro.capa}" style="width:125px; height: 175px;"/>
+						<h:outputText value="#{comentarioControle.livro.sinopse}"/>
+						
+						<h:outputText value="#{comentarioControle.livro.autor}"/>
+								
+					</h:panelGrid>
+		  		</p:panel>
+		  	</h:form>
+		  	
+		  	<h:form id="coment">
+		  		<h:panelGrid columns="2" cellpadding="5" header="Adicione a um Armario">
+		                    					       		 	
+        		 	<p:selectOneButton id="cate" value="#{comentarioControle.categorias}" converter="categoriasConverter" var="cat" >
+			            <f:selectItems value="#{comentarioControle.listaCategorias}" var="categ" itemLabel="#{categ.descricao}" itemValue="#{categ}" />
+			            <p:column>
+			                <h:outputText value="#{cat.descricao}" />
+			            </p:column>
+			        </p:selectOneButton>		   			              
+					<p:commandButton value="Salvar" action="#{comentarioControle.inserirArmarios()}" update="@form"></p:commandButton>
+	            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+					
+		    	</h:panelGrid>
+			</h:form>							
+			<h:form id="lista">
+		  	
+			  	<p:panel id="basic" header="Adicionar Avaliacao">
+			        <h:panelGrid columns="4" cellpadding="10">
+					 	
+					 	<h:outputLabel value = "Adicionar comentario" />
+				  		<p:inputTextarea value = "#{comentarioControle.avaliacao.descricao}" rows="2" cols="22" maxlength="200"/>
+				  		
+				  		<h:outputText value="Notas" />
+	        			<p:rating value="#{comentarioControle.avaliacao.nota}" />
+	        			
+	       
+					 			        
+				        <p:commandButton value = "Adicionar" action ="#{comentarioControle.inserirAvaliacao()}" process="@form" update="@form :lista:dataList"></p:commandButton>
+			            
+			            <br/>
+			            
+			            <p:messages id="messages" closable="true">
+			            </p:messages>
+			            
+			        </h:panelGrid>
+			    </p:panel>
+			
+					
+				<p:dataList id="dataList" var="co" value="#{comentarioControle.avaliacoesPorLivro}" type="unordered" itemType="none" rows="10" 
+					paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+	           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+	                rowsPerPageTemplate="5,10,15">
+			        <f:facet name="header">
+			            Comentarios
+			        </f:facet>					
+						<p:panel id="list" header="#{co.usuario.nome}">
+					        <h:panelGrid columns="2" cellpadding="10">
+					        
+					            <img src="#{co.usuario.perfil}" style="width:125px;"/>
+					            <h:outputText value="#{co.descricao}"/>
+					            
+					            <p:column headerText="Excluir">
+					    			<p:commandButton icon="ui-icon-trash"
+					    							action="#{comentarioControle.excluirAvaliacao(co)}"
+					    							update="@form">
+					    			</p:commandButton>
+					    		</p:column>  
+					        </h:panelGrid>
+					    </p:panel>				
+			    </p:dataList>		    
+			    		   	 
+		    </h:form>
+		</ui:define>
+	</ui:composition>
+</html>

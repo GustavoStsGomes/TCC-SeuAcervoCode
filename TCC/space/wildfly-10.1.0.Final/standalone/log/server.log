@@ -1,0 +1,833 @@
+2019-07-08 14:17:27,943 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2019-07-08 14:17:29,932 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2019-07-08 14:17:30,054 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2019-07-08 14:17:30,055 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\jboss-modules.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jfr.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jre1.8.0_121\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jre1.8.0_121\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jre1.8.0_121\jre
+	java.io.tmpdir = C:\Users\Gustavo\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jre1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;native;C:/Program Files/Java/jre1.8.0_121/bin/../jre/bin/server;C:/Program Files/Java/jre1.8.0_121/bin/../jre/bin;C:/Program Files/Java/jre1.8.0_121/bin/../jre/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Gustavo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Gustavo\Desktop;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_121-b13
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_121
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.121-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final
+	jboss.host.name = desktop-d2j2ugc
+	jboss.modules.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = desktop-d2j2ugc
+	jboss.qualified.host.name = desktop-d2j2ugc
+	jboss.server.base.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone
+	jboss.server.config.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\configuration
+	jboss.server.data.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\data
+	jboss.server.deploy.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\data\content
+	jboss.server.log.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\log
+	jboss.server.name = desktop-d2j2ugc
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\configuration\logging.properties
+	module.path = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\modules
+	org.jboss.boot.log.file = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\log\boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = JBossTools: WildFly 10.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jre1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_121\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jre1.8.0_121\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\modules org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = BR
+	user.dir = E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\bin
+	user.home = C:\Users\Gustavo
+	user.language = pt
+	user.name = Gustavo
+	user.script = 
+	user.timezone = America/Sao_Paulo
+	user.variant = 
+2019-07-08 14:17:30,056 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -Dprogram.name=JBossTools: WildFly 10.x -Xms64m -Xmx512m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\log\boot.log -Dlogging.configuration=file:E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\configuration\logging.properties -Djboss.home.dir=E:\Trabalhos\tcc\space\wildfly-10.1.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
+2019-07-08 14:17:38,086 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2019-07-08 14:17:38,171 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.4.0.Final
+2019-07-08 14:17:38,185 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.4.0.Final
+2019-07-08 14:17:38,245 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2019-07-08 14:17:38,251 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2019-07-08 14:17:38,261 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2019-07-08 14:17:38,265 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2019-07-08 14:17:38,271 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2019-07-08 14:17:38,279 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2019-07-08 14:17:38,283 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=4.9.6.Final
+2019-07-08 14:17:38,402 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2019-07-08 14:17:38,529 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+2019-07-08 14:17:39,042 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 1.4.0.Final starting
+2019-07-08 14:17:39,362 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path 'E:\Trabalhos\tcc\space\wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2019-07-08 14:17:39,524 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2019-07-08 14:17:39,528 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0018: Started Driver service with driver-name = h2
+2019-07-08 14:17:39,656 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2019-07-08 14:17:39,656 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2019-07-08 14:17:39,891 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2019-07-08 14:17:39,891 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2019-07-08 14:17:40,112 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0012: Started server default-server.
+2019-07-08 14:17:40,148 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 4.0.21.Final
+2019-07-08 14:17:40,162 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+2019-07-08 14:17:40,395 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-2) WFLYDM0111: Keystore E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2019-07-08 14:17:40,418 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) WFLYDS0013: Started FileSystemDeploymentService for directory E:\Trabalhos\tcc\space\wildfly-10.1.0.Final\standalone\deployments
+2019-07-08 14:17:40,480 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2019-07-08 14:17:40,579 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2019-07-08 14:17:40,636 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-7) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2019-07-08 14:17:40,831 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 62) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:40,831 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 64) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:40,832 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 62) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:40,831 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:40,833 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 64) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:40,834 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2019-07-08 14:17:41,120 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2019-07-08 14:17:42,339 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
+2019-07-08 14:17:42,965 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2019-07-08 14:17:42,966 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2019-07-08 14:17:42,966 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 16646ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
+2019-07-08 14:18:55,482 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) WFLYDS0004: Found SeuAcervo-0.0.1-SNAPSHOT.war in deployment directory. To trigger deployment create a file called SeuAcervo-0.0.1-SNAPSHOT.war.dodeploy
+2019-07-08 14:18:55,776 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "SeuAcervo-0.0.1-SNAPSHOT.war" (runtime-name: "SeuAcervo-0.0.1-SNAPSHOT.war")
+2019-07-08 14:18:58,905 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry groovy-2.1.6.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,905 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry antlr-2.7.7.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,906 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry asm-tree-4.0.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,906 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry asm-commons-4.0.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,906 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry asm-4.0.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,906 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry asm-util-4.0.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,907 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry asm-analysis-4.0.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-extensions-1.6.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,907 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry aesh-terminal-api-1.10.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/aesh-readline-1.10.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:58,916 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0059: Class Path entry activation.jar in /E:/Trabalhos/tcc/space/wildfly-10.1.0.Final/standalone/deployments/SeuAcervo-0.0.1-SNAPSHOT.war/WEB-INF/lib/mail-1.4.1.jar  does not point to a valid jar for a Class-Path reference.
+2019-07-08 14:18:59,173 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) WFLYJPA0002: Read persistence.xml for SaPU
+2019-07-08 14:18:59,681 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 69) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'SeuAcervo-0.0.1-SNAPSHOT.war#SaPU'
+2019-07-08 14:18:59,725 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 69) HHH000204: Processing PersistenceUnitInfo [
+	name: SaPU
+	...]
+2019-07-08 14:19:00,006 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment SeuAcervo-0.0.1-SNAPSHOT.war
+2019-07-08 14:19:00,255 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 69) HHH000412: Hibernate Core {5.0.10.Final}
+2019-07-08 14:19:00,257 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 69) HHH000206: hibernate.properties not found
+2019-07-08 14:19:00,259 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 69) HHH000021: Bytecode provider name : javassist
+2019-07-08 14:19:00,373 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 69) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-07-08 14:19:00,592 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-6) HV000001: Hibernate Validator 5.2.4.Final
+2019-07-08 14:19:01,090 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2019-07-08 14:19:01,091 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.fabric.jdbc.FabricMySQLDriver (version 5.1)
+2019-07-08 14:19:01,182 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 2.3.5 (Final)
+2019-07-08 14:19:01,254 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = SeuAcervo-0.0.1-SNAPSHOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
+2019-07-08 14:19:01,255 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = SeuAcervo-0.0.1-SNAPSHOT.war_com.mysql.jdbc.Driver_5_1
+2019-07-08 14:19:01,554 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 69) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'SeuAcervo-0.0.1-SNAPSHOT.war#SaPU'
+2019-07-08 14:19:01,944 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 69) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-08 14:19:02,029 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 69) Envers integration enabled? : true
+2019-07-08 14:19:02,924 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 69) HHH000228: Running hbm2ddl schema update
+2019-07-08 14:19:02,937 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: ARMARIOS
+2019-07-08 14:19:02,938 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: ARMARIOS
+2019-07-08 14:19:02,945 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: AVALIACAO
+2019-07-08 14:19:02,946 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: AVALIACAO
+2019-07-08 14:19:02,948 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: CATEGORIAS
+2019-07-08 14:19:02,948 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: CATEGORIAS
+2019-07-08 14:19:02,949 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: CIDADE
+2019-07-08 14:19:02,949 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: CIDADE
+2019-07-08 14:19:02,950 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: EDITORA
+2019-07-08 14:19:02,951 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: EDITORA
+2019-07-08 14:19:02,951 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: ESTADO
+2019-07-08 14:19:02,952 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: ESTADO
+2019-07-08 14:19:02,953 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: LIVRO
+2019-07-08 14:19:02,953 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: LIVRO
+2019-07-08 14:19:02,954 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: USUARIO
+2019-07-08 14:19:02,954 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 69) HHH000262: Table not found: USUARIO
+2019-07-08 14:19:03,973 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 71) Inicializando Mojarra 2.2.13.SP1 20160303-1204 para o contexto '/SeuAcervo'
+2019-07-08 14:19:06,643 INFO  [org.primefaces.webapp.PostConstructApplicationEventListener] (ServerService Thread Pool -- 71) Running on PrimeFaces 6.1
+2019-07-08 14:19:06,695 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 71) WFLYUT0021: Registered web context: /SeuAcervo
+2019-07-08 14:19:06,774 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0010: Deployed "SeuAcervo-0.0.1-SNAPSHOT.war" (runtime-name : "SeuAcervo-0.0.1-SNAPSHOT.war")
+2019-07-08 14:19:09,595 INFO  [org.hibernate.jpa.internal.util.LogHelper] (default task-2) HHH000204: Processing PersistenceUnitInfo [
+	name: SaPU
+	...]
+2019-07-08 14:19:09,612 WARN  [org.hibernate.orm.connections] (default task-2) HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-07-08 14:19:09,613 INFO  [org.hibernate.orm.connections] (default task-2) HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://187.120.153.243:3306/SeuAcervo]
+2019-07-08 14:19:09,614 INFO  [org.hibernate.orm.connections] (default task-2) HHH10001001: Connection properties: {user=acervous, password=****}
+2019-07-08 14:19:09,614 INFO  [org.hibernate.orm.connections] (default task-2) HHH10001003: Autocommit mode: false
+2019-07-08 14:19:09,622 INFO  [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl] (default task-2) HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-07-08 14:19:14,258 ERROR [stderr] (default task-2) Mon Jul 08 14:19:14 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:14,425 INFO  [org.hibernate.dialect.Dialect] (default task-2) HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-08 14:19:14,446 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (default task-2) Envers integration enabled? : true
+2019-07-08 14:19:14,521 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (default task-2) HHH000228: Running hbm2ddl schema update
+2019-07-08 14:19:14,537 ERROR [stderr] (default task-2) Mon Jul 08 14:19:14 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:15,595 INFO  [stdout] (default task-2) Realizando teste de reconexao...
+2019-07-08 14:19:15,619 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,619 INFO  [stdout] (default task-2)     Select
+2019-07-08 14:19:15,620 INFO  [stdout] (default task-2)         1
+2019-07-08 14:19:15,641 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (default task-2) HHH000397: Using ASTQueryTranslatorFactory
+2019-07-08 14:19:15,735 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,735 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:15,736 INFO  [stdout] (default task-2)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,737 INFO  [stdout] (default task-2)         USUARIO usuario0_
+2019-07-08 14:19:15,751 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,751 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,751 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         CIDADE cidade0_ 
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)     left outer join
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         ESTADO estado1_ 
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)     where
+2019-07-08 14:19:15,752 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:15,765 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         CIDADE cidade0_ 
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)     left outer join
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)         ESTADO estado1_ 
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:15,766 INFO  [stdout] (default task-2)     where
+2019-07-08 14:19:15,767 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:15,775 INFO  [stdout] (default task-2) Realizando teste de reconexao...
+2019-07-08 14:19:15,775 INFO  [stdout] (default task-2) Havia problemas de conexao.
+2019-07-08 14:19:15,775 INFO  [stdout] (default task-2) O EntityManager sera reinstanciado.
+2019-07-08 14:19:15,775 INFO  [stdout] (default task-2) Realizando teste de reconexao...
+2019-07-08 14:19:15,780 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,780 INFO  [stdout] (default task-2)     Select
+2019-07-08 14:19:15,780 INFO  [stdout] (default task-2)         1
+2019-07-08 14:19:15,782 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,782 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:15,783 INFO  [stdout] (default task-2)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:15,784 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,784 INFO  [stdout] (default task-2)         USUARIO usuario0_
+2019-07-08 14:19:15,787 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,787 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         CIDADE cidade0_ 
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)     left outer join
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         ESTADO estado1_ 
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)     where
+2019-07-08 14:19:15,788 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:15,791 INFO  [stdout] (default task-2) Hibernate: 
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)     select
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)     from
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         CIDADE cidade0_ 
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)     left outer join
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)         ESTADO estado1_ 
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:15,792 INFO  [stdout] (default task-2)     where
+2019-07-08 14:19:15,793 INFO  [stdout] (default task-2)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:15,795 INFO  [stdout] (default task-2) +++++++++++++++++++++++++ 6
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for admin
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for 
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for  
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for user
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for user
+2019-07-08 14:19:15,796 INFO  [stdout] (default task-2) dentro do for user
+2019-07-08 14:19:15,797 INFO  [stdout] (default task-2) +++++++++++++++++++++++++ 5
+2019-07-08 14:19:21,409 INFO  [stdout] (default task-15) Realizando teste de reconexao...
+2019-07-08 14:19:21,409 INFO  [stdout] (default task-15) Havia problemas de conexao.
+2019-07-08 14:19:21,409 INFO  [stdout] (default task-15) O EntityManager sera reinstanciado.
+2019-07-08 14:19:21,409 INFO  [stdout] (default task-15) Realizando teste de reconexao...
+2019-07-08 14:19:21,418 ERROR [stderr] (default task-15) Mon Jul 08 14:19:21 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:21,430 INFO  [stdout] (default task-15) Hibernate: 
+2019-07-08 14:19:21,430 INFO  [stdout] (default task-15)     Select
+2019-07-08 14:19:21,430 INFO  [stdout] (default task-15)         1
+2019-07-08 14:19:21,444 INFO  [stdout] (default task-15) Hibernate: 
+2019-07-08 14:19:21,444 INFO  [stdout] (default task-15)     select
+2019-07-08 14:19:21,444 INFO  [stdout] (default task-15)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)     from
+2019-07-08 14:19:21,445 INFO  [stdout] (default task-15)         USUARIO usuario0_ 
+2019-07-08 14:19:21,446 INFO  [stdout] (default task-15)     where
+2019-07-08 14:19:21,446 INFO  [stdout] (default task-15)         usuario0_.EMAIL=? 
+2019-07-08 14:19:21,446 INFO  [stdout] (default task-15)         and usuario0_.SENHA=?
+2019-07-08 14:19:21,450 INFO  [stdout] (default task-15) Hibernate: 
+2019-07-08 14:19:21,450 INFO  [stdout] (default task-15)     select
+2019-07-08 14:19:21,450 INFO  [stdout] (default task-15)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:21,450 INFO  [stdout] (default task-15)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:21,450 INFO  [stdout] (default task-15)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)     from
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)         CIDADE cidade0_ 
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)     left outer join
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)         ESTADO estado1_ 
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)     where
+2019-07-08 14:19:21,451 INFO  [stdout] (default task-15)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:21,522 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,522 INFO  [stdout] (default task-16) Havia problemas de conexao.
+2019-07-08 14:19:21,523 INFO  [stdout] (default task-16) O EntityManager sera reinstanciado.
+2019-07-08 14:19:21,523 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,532 ERROR [stderr] (default task-16) Mon Jul 08 14:19:21 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:21,544 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,544 INFO  [stdout] (default task-16)     Select
+2019-07-08 14:19:21,544 INFO  [stdout] (default task-16)         1
+2019-07-08 14:19:21,548 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,549 INFO  [stdout] (default task-16)     select
+2019-07-08 14:19:21,549 INFO  [stdout] (default task-16)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:21,549 INFO  [stdout] (default task-16)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:21,549 INFO  [stdout] (default task-16)     from
+2019-07-08 14:19:21,549 INFO  [stdout] (default task-16)         CATEGORIAS categorias0_
+2019-07-08 14:19:21,557 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,557 INFO  [stdout] (default task-16) Havia problemas de conexao.
+2019-07-08 14:19:21,557 INFO  [stdout] (default task-16) O EntityManager sera reinstanciado.
+2019-07-08 14:19:21,557 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,565 ERROR [stderr] (default task-16) Mon Jul 08 14:19:21 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:21,576 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,576 INFO  [stdout] (default task-16)     Select
+2019-07-08 14:19:21,576 INFO  [stdout] (default task-16)         1
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16)     select
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16)     from
+2019-07-08 14:19:21,578 INFO  [stdout] (default task-16)         CATEGORIAS categorias0_
+2019-07-08 14:19:21,586 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,586 INFO  [stdout] (default task-16) Havia problemas de conexao.
+2019-07-08 14:19:21,587 INFO  [stdout] (default task-16) O EntityManager sera reinstanciado.
+2019-07-08 14:19:21,587 INFO  [stdout] (default task-16) Realizando teste de reconexao...
+2019-07-08 14:19:21,596 ERROR [stderr] (default task-16) Mon Jul 08 14:19:21 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:21,608 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,608 INFO  [stdout] (default task-16)     Select
+2019-07-08 14:19:21,608 INFO  [stdout] (default task-16)         1
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)     select
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.IDLIVRO as IDLIVRO1_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.IDEDITORA as IDEDITOR9_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.AUTOR as AUTOR2_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.CAPA as CAPA3_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.DT_ADICIONADO as DT_ADICI4_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.GENERO as GENERO5_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.ISBN as ISBN6_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.SINOPSE as SINOPSE7_6_,
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         livro0_.TITULO as TITULO8_6_ 
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)     from
+2019-07-08 14:19:21,612 INFO  [stdout] (default task-16)         LIVRO livro0_
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)     select
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)         editora0_.IDEDITORA as IDEDITOR1_4_0_,
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)         editora0_.DESCRICAO as DESCRICA2_4_0_,
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)         editora0_.IMAGEM as IMAGEM3_4_0_,
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)         editora0_.NOME as NOME4_4_0_ 
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)     from
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)         EDITORA editora0_ 
+2019-07-08 14:19:21,618 INFO  [stdout] (default task-16)     where
+2019-07-08 14:19:21,619 INFO  [stdout] (default task-16)         editora0_.IDEDITORA=?
+2019-07-08 14:19:21,621 INFO  [stdout] (default task-16) Hibernate: 
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)     select
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         editora0_.IDEDITORA as IDEDITOR1_4_0_,
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         editora0_.DESCRICAO as DESCRICA2_4_0_,
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         editora0_.IMAGEM as IMAGEM3_4_0_,
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         editora0_.NOME as NOME4_4_0_ 
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)     from
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         EDITORA editora0_ 
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)     where
+2019-07-08 14:19:21,622 INFO  [stdout] (default task-16)         editora0_.IDEDITORA=?
+2019-07-08 14:19:26,649 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,649 INFO  [stdout] (default task-37) Havia problemas de conexao.
+2019-07-08 14:19:26,649 INFO  [stdout] (default task-37) O EntityManager sera reinstanciado.
+2019-07-08 14:19:26,650 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,658 ERROR [stderr] (default task-37) Mon Jul 08 14:19:26 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:26,675 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,675 INFO  [stdout] (default task-37)     Select
+2019-07-08 14:19:26,675 INFO  [stdout] (default task-37)         1
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37)     select
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37)     from
+2019-07-08 14:19:26,677 INFO  [stdout] (default task-37)         CATEGORIAS categorias0_
+2019-07-08 14:19:26,683 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,683 INFO  [stdout] (default task-37) Havia problemas de conexao.
+2019-07-08 14:19:26,683 INFO  [stdout] (default task-37) O EntityManager sera reinstanciado.
+2019-07-08 14:19:26,683 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,692 ERROR [stderr] (default task-37) Mon Jul 08 14:19:26 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:26,704 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,704 INFO  [stdout] (default task-37)     Select
+2019-07-08 14:19:26,704 INFO  [stdout] (default task-37)         1
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37)     select
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37)     from
+2019-07-08 14:19:26,709 INFO  [stdout] (default task-37)         CATEGORIAS categorias0_
+2019-07-08 14:19:26,719 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,719 INFO  [stdout] (default task-37) Havia problemas de conexao.
+2019-07-08 14:19:26,719 INFO  [stdout] (default task-37) O EntityManager sera reinstanciado.
+2019-07-08 14:19:26,720 INFO  [stdout] (default task-37) Realizando teste de reconexao...
+2019-07-08 14:19:26,727 ERROR [stderr] (default task-37) Mon Jul 08 14:19:26 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:26,739 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,740 INFO  [stdout] (default task-37)     Select
+2019-07-08 14:19:26,740 INFO  [stdout] (default task-37)         1
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)     select
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.IDLIVRO as IDLIVRO1_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.IDEDITORA as IDEDITOR9_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.AUTOR as AUTOR2_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.CAPA as CAPA3_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.DT_ADICIONADO as DT_ADICI4_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.GENERO as GENERO5_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.ISBN as ISBN6_6_,
+2019-07-08 14:19:26,742 INFO  [stdout] (default task-37)         livro0_.SINOPSE as SINOPSE7_6_,
+2019-07-08 14:19:26,743 INFO  [stdout] (default task-37)         livro0_.TITULO as TITULO8_6_ 
+2019-07-08 14:19:26,743 INFO  [stdout] (default task-37)     from
+2019-07-08 14:19:26,743 INFO  [stdout] (default task-37)         LIVRO livro0_
+2019-07-08 14:19:26,747 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,747 INFO  [stdout] (default task-37)     select
+2019-07-08 14:19:26,747 INFO  [stdout] (default task-37)         editora0_.IDEDITORA as IDEDITOR1_4_0_,
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)         editora0_.DESCRICAO as DESCRICA2_4_0_,
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)         editora0_.IMAGEM as IMAGEM3_4_0_,
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)         editora0_.NOME as NOME4_4_0_ 
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)     from
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)         EDITORA editora0_ 
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)     where
+2019-07-08 14:19:26,748 INFO  [stdout] (default task-37)         editora0_.IDEDITORA=?
+2019-07-08 14:19:26,753 INFO  [stdout] (default task-37) Hibernate: 
+2019-07-08 14:19:26,753 INFO  [stdout] (default task-37)     select
+2019-07-08 14:19:26,753 INFO  [stdout] (default task-37)         editora0_.IDEDITORA as IDEDITOR1_4_0_,
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)         editora0_.DESCRICAO as DESCRICA2_4_0_,
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)         editora0_.IMAGEM as IMAGEM3_4_0_,
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)         editora0_.NOME as NOME4_4_0_ 
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)     from
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)         EDITORA editora0_ 
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)     where
+2019-07-08 14:19:26,754 INFO  [stdout] (default task-37)         editora0_.IDEDITORA=?
+2019-07-08 14:19:28,077 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,078 INFO  [stdout] (default task-38) Havia problemas de conexao.
+2019-07-08 14:19:28,078 INFO  [stdout] (default task-38) O EntityManager sera reinstanciado.
+2019-07-08 14:19:28,078 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,086 ERROR [stderr] (default task-38) Mon Jul 08 14:19:28 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:28,098 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,098 INFO  [stdout] (default task-38)     Select
+2019-07-08 14:19:28,098 INFO  [stdout] (default task-38)         1
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38)     select
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38)     from
+2019-07-08 14:19:28,100 INFO  [stdout] (default task-38)         CATEGORIAS categorias0_
+2019-07-08 14:19:28,105 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,105 INFO  [stdout] (default task-38) Havia problemas de conexao.
+2019-07-08 14:19:28,105 INFO  [stdout] (default task-38) O EntityManager sera reinstanciado.
+2019-07-08 14:19:28,105 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,114 ERROR [stderr] (default task-38) Mon Jul 08 14:19:28 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:28,126 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,126 INFO  [stdout] (default task-38)     Select
+2019-07-08 14:19:28,126 INFO  [stdout] (default task-38)         1
+2019-07-08 14:19:28,128 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,128 INFO  [stdout] (default task-38)     select
+2019-07-08 14:19:28,128 INFO  [stdout] (default task-38)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:28,128 INFO  [stdout] (default task-38)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:28,128 INFO  [stdout] (default task-38)     from
+2019-07-08 14:19:28,129 INFO  [stdout] (default task-38)         CATEGORIAS categorias0_
+2019-07-08 14:19:28,137 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,137 INFO  [stdout] (default task-38) Havia problemas de conexao.
+2019-07-08 14:19:28,137 INFO  [stdout] (default task-38) O EntityManager sera reinstanciado.
+2019-07-08 14:19:28,137 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,145 ERROR [stderr] (default task-38) Mon Jul 08 14:19:28 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:28,170 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,170 INFO  [stdout] (default task-38)     Select
+2019-07-08 14:19:28,170 INFO  [stdout] (default task-38)         1
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)     select
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)         editora0_.IDEDITORA as IDEDITOR1_4_,
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)         editora0_.DESCRICAO as DESCRICA2_4_,
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)         editora0_.IMAGEM as IMAGEM3_4_,
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)         editora0_.NOME as NOME4_4_ 
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)     from
+2019-07-08 14:19:28,174 INFO  [stdout] (default task-38)         EDITORA editora0_
+2019-07-08 14:19:28,179 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,179 INFO  [stdout] (default task-38) Havia problemas de conexao.
+2019-07-08 14:19:28,179 INFO  [stdout] (default task-38) O EntityManager sera reinstanciado.
+2019-07-08 14:19:28,179 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,187 ERROR [stderr] (default task-38) Mon Jul 08 14:19:28 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:28,199 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,199 INFO  [stdout] (default task-38)     Select
+2019-07-08 14:19:28,200 INFO  [stdout] (default task-38)         1
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)     select
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)         editora0_.IDEDITORA as IDEDITOR1_4_,
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)         editora0_.DESCRICAO as DESCRICA2_4_,
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)         editora0_.IMAGEM as IMAGEM3_4_,
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)         editora0_.NOME as NOME4_4_ 
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)     from
+2019-07-08 14:19:28,202 INFO  [stdout] (default task-38)         EDITORA editora0_
+2019-07-08 14:19:28,215 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,215 INFO  [stdout] (default task-38) Havia problemas de conexao.
+2019-07-08 14:19:28,215 INFO  [stdout] (default task-38) O EntityManager sera reinstanciado.
+2019-07-08 14:19:28,215 INFO  [stdout] (default task-38) Realizando teste de reconexao...
+2019-07-08 14:19:28,226 ERROR [stderr] (default task-38) Mon Jul 08 14:19:28 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:28,250 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,250 INFO  [stdout] (default task-38)     Select
+2019-07-08 14:19:28,250 INFO  [stdout] (default task-38)         1
+2019-07-08 14:19:28,252 INFO  [stdout] (default task-38) Hibernate: 
+2019-07-08 14:19:28,252 INFO  [stdout] (default task-38)     select
+2019-07-08 14:19:28,252 INFO  [stdout] (default task-38)         editora0_.IDEDITORA as IDEDITOR1_4_,
+2019-07-08 14:19:28,252 INFO  [stdout] (default task-38)         editora0_.DESCRICAO as DESCRICA2_4_,
+2019-07-08 14:19:28,253 INFO  [stdout] (default task-38)         editora0_.IMAGEM as IMAGEM3_4_,
+2019-07-08 14:19:28,253 INFO  [stdout] (default task-38)         editora0_.NOME as NOME4_4_ 
+2019-07-08 14:19:28,253 INFO  [stdout] (default task-38)     from
+2019-07-08 14:19:28,253 INFO  [stdout] (default task-38)         EDITORA editora0_
+2019-07-08 14:19:30,713 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,713 INFO  [stdout] (default task-45) Havia problemas de conexao.
+2019-07-08 14:19:30,713 INFO  [stdout] (default task-45) O EntityManager sera reinstanciado.
+2019-07-08 14:19:30,714 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,722 ERROR [stderr] (default task-45) Mon Jul 08 14:19:30 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:30,734 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,734 INFO  [stdout] (default task-45)     Select
+2019-07-08 14:19:30,734 INFO  [stdout] (default task-45)         1
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,736 INFO  [stdout] (default task-45)         CATEGORIAS categorias0_
+2019-07-08 14:19:30,740 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,741 INFO  [stdout] (default task-45) Havia problemas de conexao.
+2019-07-08 14:19:30,741 INFO  [stdout] (default task-45) O EntityManager sera reinstanciado.
+2019-07-08 14:19:30,741 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,749 ERROR [stderr] (default task-45) Mon Jul 08 14:19:30 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:30,760 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,760 INFO  [stdout] (default task-45)     Select
+2019-07-08 14:19:30,760 INFO  [stdout] (default task-45)         1
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45)         categorias0_.IDCATEGORIAS as IDCATEGO1_2_,
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45)         categorias0_.DESCRICAO as DESCRICA2_2_ 
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,762 INFO  [stdout] (default task-45)         CATEGORIAS categorias0_
+2019-07-08 14:19:30,768 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,768 INFO  [stdout] (default task-45) Havia problemas de conexao.
+2019-07-08 14:19:30,768 INFO  [stdout] (default task-45) O EntityManager sera reinstanciado.
+2019-07-08 14:19:30,768 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,776 ERROR [stderr] (default task-45) Mon Jul 08 14:19:30 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:30,788 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,788 INFO  [stdout] (default task-45)     Select
+2019-07-08 14:19:30,788 INFO  [stdout] (default task-45)         1
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,791 INFO  [stdout] (default task-45)         USUARIO usuario0_
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         CIDADE cidade0_ 
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)     left outer join
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         ESTADO estado1_ 
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)     where
+2019-07-08 14:19:30,796 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         CIDADE cidade0_ 
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)     left outer join
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         ESTADO estado1_ 
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)     where
+2019-07-08 14:19:30,799 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:30,802 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,802 INFO  [stdout] (default task-45) Havia problemas de conexao.
+2019-07-08 14:19:30,802 INFO  [stdout] (default task-45) O EntityManager sera reinstanciado.
+2019-07-08 14:19:30,802 INFO  [stdout] (default task-45) Realizando teste de reconexao...
+2019-07-08 14:19:30,810 ERROR [stderr] (default task-45) Mon Jul 08 14:19:30 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:30,950 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,950 INFO  [stdout] (default task-45)     Select
+2019-07-08 14:19:30,950 INFO  [stdout] (default task-45)         1
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,953 INFO  [stdout] (default task-45)         USUARIO usuario0_
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         CIDADE cidade0_ 
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)     left outer join
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         ESTADO estado1_ 
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)     where
+2019-07-08 14:19:30,956 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:30,960 INFO  [stdout] (default task-45) Hibernate: 
+2019-07-08 14:19:30,960 INFO  [stdout] (default task-45)     select
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)     from
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         CIDADE cidade0_ 
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)     left outer join
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         ESTADO estado1_ 
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)     where
+2019-07-08 14:19:30,961 INFO  [stdout] (default task-45)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:30,963 INFO  [stdout] (default task-45) +++++++++++++++++++++++++ 6
+2019-07-08 14:19:30,963 INFO  [stdout] (default task-45) dentro do for admin
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) dentro do for 
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) dentro do for  
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) dentro do for user
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) dentro do for user
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) dentro do for user
+2019-07-08 14:19:30,964 INFO  [stdout] (default task-45) +++++++++++++++++++++++++ 5
+2019-07-08 14:19:33,403 INFO  [stdout] (default task-51) Realizando teste de reconexao...
+2019-07-08 14:19:33,404 INFO  [stdout] (default task-51) Havia problemas de conexao.
+2019-07-08 14:19:33,404 INFO  [stdout] (default task-51) O EntityManager sera reinstanciado.
+2019-07-08 14:19:33,404 INFO  [stdout] (default task-51) Realizando teste de reconexao...
+2019-07-08 14:19:33,411 ERROR [stderr] (default task-51) Mon Jul 08 14:19:33 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:33,422 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,422 INFO  [stdout] (default task-51)     Select
+2019-07-08 14:19:33,422 INFO  [stdout] (default task-51)         1
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,424 INFO  [stdout] (default task-51)         USUARIO usuario0_
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         CIDADE cidade0_ 
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)     left outer join
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         ESTADO estado1_ 
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)     where
+2019-07-08 14:19:33,427 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:33,430 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)         CIDADE cidade0_ 
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)     left outer join
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)         ESTADO estado1_ 
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)     where
+2019-07-08 14:19:33,431 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:33,433 INFO  [stdout] (default task-51) Realizando teste de reconexao...
+2019-07-08 14:19:33,433 INFO  [stdout] (default task-51) Havia problemas de conexao.
+2019-07-08 14:19:33,433 INFO  [stdout] (default task-51) O EntityManager sera reinstanciado.
+2019-07-08 14:19:33,433 INFO  [stdout] (default task-51) Realizando teste de reconexao...
+2019-07-08 14:19:33,441 ERROR [stderr] (default task-51) Mon Jul 08 14:19:33 BRT 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-07-08 14:19:33,452 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,452 INFO  [stdout] (default task-51)     Select
+2019-07-08 14:19:33,452 INFO  [stdout] (default task-51)         1
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.IDUSUARIO as IDUSUARI1_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.IDCIDADE as IDCIDAD12_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.BAIRRO as BAIRRO2_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.COMPLEMENTO as COMPLEME3_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.EMAIL as EMAIL4_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.LOGRADOURO as LOGRADOU5_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.NOME as NOME6_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.NUMERO as NUMERO7_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.FOTO as FOTO8_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.SENHA as SENHA9_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.TELEFONE as TELEFON10_7_,
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         usuario0_.TIPO as TIPO11_7_ 
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,454 INFO  [stdout] (default task-51)         USUARIO usuario0_
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         CIDADE cidade0_ 
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)     left outer join
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         ESTADO estado1_ 
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)     where
+2019-07-08 14:19:33,458 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51) Hibernate: 
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)     select
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE as IDCIDADE1_3_0_,
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         cidade0_.SIGLA_ESTADO as SIGLA_ES3_3_0_,
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         cidade0_.NOME as NOME2_3_0_,
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         estado1_.SIGLA_ESTADO as SIGLA_ES1_5_1_,
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         estado1_.NOME as NOME2_5_1_ 
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)     from
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         CIDADE cidade0_ 
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)     left outer join
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         ESTADO estado1_ 
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)             on cidade0_.SIGLA_ESTADO=estado1_.SIGLA_ESTADO 
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)     where
+2019-07-08 14:19:33,461 INFO  [stdout] (default task-51)         cidade0_.IDCIDADE=?
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) +++++++++++++++++++++++++ 6
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for admin
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for 
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for  
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for user
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for user
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) dentro do for user
+2019-07-08 14:19:33,464 INFO  [stdout] (default task-51) +++++++++++++++++++++++++ 5
+2019-07-08 14:19:38,899 INFO  [org.jboss.as.server] (management-handler-thread - 6) WFLYSRV0236: Suspending server with no timeout.
+2019-07-08 14:19:38,908 INFO  [org.jboss.as.server] (Management Triggered Shutdown) WFLYSRV0241: Shutting down in response to management operation 'shutdown'
+2019-07-08 14:19:38,925 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0019: Stopped Driver service with driver-name = SeuAcervo-0.0.1-SNAPSHOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
+2019-07-08 14:19:38,926 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = SeuAcervo-0.0.1-SNAPSHOT.war_com.mysql.jdbc.Driver_5_1
+2019-07-08 14:19:38,938 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 91) WFLYUT0022: Unregistered web context: /SeuAcervo
+2019-07-08 14:19:38,998 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0019: Host default-host stopping
+2019-07-08 14:19:39,094 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 106) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'SeuAcervo-0.0.1-SNAPSHOT.war#SaPU'
+2019-07-08 14:19:39,132 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 106) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'SeuAcervo-0.0.1-SNAPSHOT.war#SaPU'
+2019-07-08 14:19:39,135 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2019-07-08 14:19:39,154 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2019-07-08 14:19:39,154 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTPS listener https suspending
+2019-07-08 14:19:39,156 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2019-07-08 14:19:39,156 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2019-07-08 14:19:39,158 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 1.4.0.Final stopping
+2019-07-08 14:19:39,170 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2019-07-08 14:19:39,842 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment SeuAcervo-0.0.1-SNAPSHOT.war (runtime-name: SeuAcervo-0.0.1-SNAPSHOT.war) in 916ms
+2019-07-08 14:19:39,848 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) stopped in 915ms

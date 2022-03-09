@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+	<h:head>
+    	<title>Teste</title>
+	</h:head> 
+  
+	<h:body>
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="UpDate Teste">
+		        <h:panelGrid columns="2" cellpadding="10">
+		  				  			 
+		  			<p:fileUpload id="fileUpload"
+					fileUploadListener="#{UploadTeste.upArquivo}"
+					label="Escolher" uploadLabel="Enviar"
+					cancelLabel="Cancelar" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+					invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+					fileLimit="1"
+					fileLimitMessage="Só é possível escolher 1 arquivo por vez."
+					multiple="false" auto="false"/>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true"></p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

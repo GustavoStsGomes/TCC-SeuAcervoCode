@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Livro</title>
+	</h:head> 
+  
+	<h:body>
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Livros">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        
+		        	<h:outputLabel value =""/>	
+		        	<img src="imagens/logo2.png" style="width:300px;"/>
+		  				  		
+			  		<h:outputLabel value = "Capa:" />
+		        	<p:fileUpload id="fileUpload"
+					fileUploadListener="#{UploadTeste.upArquivo}"
+					label="Escolher" uploadLabel="Enviar"
+					cancelLabel="Cancelar" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+					invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+					fileLimit="1"
+					fileLimitMessage="Só é possível escolher 1 arquivo por vez."
+					multiple="false" auto="true"/>	
+					
+			  		<h:outputLabel value = "Titulo" />
+			  		<p:inputText value = "#{livroControle.livro.titulo}" maxlength="40"/>
+			  		
+			  		<h:outputLabel value = "Autor" />
+			  		<p:inputText value = "#{livroControle.livro.autor}" maxlength="40"/>
+			  		
+			  		<h:outputLabel value = "Genero" />
+			  		<p:inputText value = "#{livroControle.livro.genero}" maxlength="40"/>
+			  		
+			  		<h:outputLabel value = "ISBN" />
+			  		<p:inputText value = "#{livroControle.livro.isbn}" maxlength="20"/>
+			  		
+			  		<h:outputLabel value = "Sinopse" />
+			  		<p:inputTextarea value = "#{livroControle.livro.sinopse}" rows="1" cols="22" maxlength="400"/>				  				
+			  		
+			  		<h:outputLabel  value="Editora" />
+			  		<p:autoComplete dropdown="true" value="#{livroControle.editora}"
+				 	completeMethod="#{livroControle.carregaEditora()}" converter="editoraConverter"
+				 	itemValue="#{editora}" itemLabel="#{editora.nome}" var="editora"></p:autoComplete>
+			  		
+			  		<p:commandButton value = "Salvar" action ="#{livroControle.inserirLivro()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{livroControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Lista de Livro" rows="10" paginator="true"
+           		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                rowsPerPageTemplate="5,10,15" widgetVar="livTable"
+                 emptyMessage="Nenhuma resposta pra pesquisa">
+	    	
+	    	<p:dataTable var="liv" value="#{livroControle.listaLivro}" dynamic="true">
+	    	
+	    		<p:column headerText="Titulo" filterBy="#{liv.titulo}" filterMatchMode="contains">
+	    			<h:outputText value="#{liv.titulo}"> </h:outputText>
+	    		</p:column>
+	    		
+	    		<p:column headerText="Autor" filterBy="#{liv.autor}" filterMatchMode="contains">
+	    			<h:outputText value="#{liv.autor}"> </h:outputText>
+	    		</p:column>	 
+	    		
+	    		<p:column headerText="Genero">
+	    			<h:outputText value="#{liv.genero}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Editora" filterBy="#{liv.editora.nome}" filterMatchMode="contains">
+	    			<h:outputText value="#{liv.editora.nome}"> </h:outputText>
+	    		</p:column>	
+	    		
+	    		<p:column headerText="Alterar">
+	    			<p:commandButton icon="ui-icon-pensil" 
+	    							action="#{livroControle.carregaFormulario(liv)}"
+	    							update="@form">
+	    				
+	    			</p:commandButton>
+	    		</p:column> 
+	    		
+	    		<p:column headerText="Excluir">
+	    			<p:commandButton icon="ui-icon-trash"
+	    							action="#{livroControle.excluirLivro(liv)}"
+	    							update="@form">
+	    			</p:commandButton>
+	    		</p:column>   		
+	    		   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">	      	
+		  	<h:form id="formulario">
+				<p:dataList value="#{editoraControle.listaEditora}" var="ed" type="unordered" itemType="none" rows="10" 
+					paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+	           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+	                rowsPerPageTemplate="5,10,15">
+			        <f:facet name="header">
+			            Editoras
+			        </f:facet>					
+						<p:panel id="basic" header="#{ed.nome}">
+					        <h:panelGrid columns="3" cellpadding="10">
+					            <img src="#{ed.imagem}" style="width:125px; height: 175px;"/>
+					            <h:outputText value="#{ed.descricao}"/>
+					            <p:commandButton icon="ui-icon-bookmark" action ="#{editoraControle.Ligacao(ed)}" update="@form"></p:commandButton>
+	
+					        </h:panelGrid>
+					    </p:panel>				
+			    </p:dataList>		        		   	 
+		    </h:form>
+		    
+		</ui:define>
+	</ui:composition>
+</html>

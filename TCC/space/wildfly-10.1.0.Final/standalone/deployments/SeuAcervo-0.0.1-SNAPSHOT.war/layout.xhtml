@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">		    
+		 
+	<h:head>
+    	<title>SeuAcervo</title>
+    	<link type="text/css" rel="stylesheet" href="theme.css"/>
+    	<link type="text/css" rel="stylesheet" href="componet.css"/>
+    	<link type="text/css" rel="stylesheet" href="layout.css"/>
+	</h:head> 
+	<h:body>
+		<div class="layout-wrapper">
+			
+		    <div class="layout-topbar">
+		    	<a href="" class="logo-container">
+		    		<img id="j_idt19" src="imagens/logo3.png"/>
+		    	</a>
+		    	<ul class="layout-topbar-menu">
+		    		<li><a href="ListaLivros.xhtml">Livros</a></li>
+		    		<li><a href="ListaEditoras.xhtml">Editoras</a></li>
+		    		<li><a href="ListaUsuarios.xhtml">Usuarios</a></li>		    		
+		    	</ul>       
+		    </div>
+		
+		    <div class="layout-sidebar">
+		        	<ui:include src="perfil.xhtml"/>
+		    </div>
+		
+		    <div class="layout-content">
+		        <ui:insert name="conteudo" />
+		    </div>
+		    		    
+		</div>
+	</h:body>
+</html>             

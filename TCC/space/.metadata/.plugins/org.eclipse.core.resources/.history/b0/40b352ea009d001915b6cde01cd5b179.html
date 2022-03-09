@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+
+		    
+	<h:head>
+    	<title>SeuAcervo</title>
+    	<h:link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    	<h:link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	</h:head> 
+  
+	<h:body>	
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Usuarios">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        
+		        	<h:outputLabel value = "Foto de Perfil" />
+		        	<p:fileUpload id="fileUpload"
+					fileUploadListener="#{UploadTeste.upArquivo}"
+					label="Escolher" uploadLabel="Enviar"
+					cancelLabel="Cancelar" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+					invalidFileMessage="São permitidas somente imagens (gif, jpeg, jpg e png)"
+					fileLimit="1"
+					fileLimitMessage="Só é possível escolher 1 arquivo por vez."
+					multiple="false" auto="true"/>	        		            
+		  				  		
+			  		<h:outputLabel value = "Nome" />
+			  		<p:inputText value = "#{novoControle.usuario.nome}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "E-mail" />
+			  		<p:inputText value = "#{novoControle.usuario.email}" maxlength="50" validatorMessage="E-mail invalido">
+			  			<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />			  		
+			  		</p:inputText>
+			  		
+			  		<h:outputLabel value = "Senha" />
+			  		<p:password value = "#{novoControle.usuario.senha}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Telefone" />
+			  		<p:inputMask id="phone" value = "#{novoControle.usuario.telefone}" 
+			  		mask="(99) 9999-9999" maxlength="15"/>
+			  		
+			  		<h:outputLabel value = "Logradouro" />
+			  		<p:inputText value = "#{novoControle.usuario.logradouro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Bairro" />
+			  		<p:inputText value = "#{novoControle.usuario.bairro}" maxlength="50"/>
+			  		
+			  		<h:outputLabel value = "Numero" />
+			  		<p:inputText value = "#{novoControle.usuario.numero}" maxlength="50"/>	 
+				    	  		
+			  		<h:outputLabel  value="Cidade" />			 	
+				 	<p:selectOneMenu id="cit" value="#{novoControle.cidade}" converter="cidadeConverter" panelStyle="width:180px"
+                         effect="fade" var="c" style="width:200px" filter="true" filterMatchMode="startsWith">
+			            <f:selectItems value="#{novoControle.carregaCidade()}" var="cidade" itemLabel="#{cidade.nome}" itemValue="#{cidade}"/>  
+			            <p:column>
+			                <h:outputText value="#{c.nome}" />
+			            </p:column>
+			        </p:selectOneMenu>
+				 	
+				 	<h:outputLabel  value="Voltar para o Login" />
+				 	<a href="login.xhtml">				 		
+				 		<img src="imagens/voltar.png" style="width:40px; height: 40px;"/>				 					 		
+				 	</a>	
+				 					        					  		
+			  		<p:commandButton value = "Salvar" action ="#{novoControle.inserirUsuario()}" update="@form"></p:commandButton>
+		  				            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+	    </h:form>
+	</h:body>
+</html>

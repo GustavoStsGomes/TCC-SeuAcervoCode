@@ -1,0 +1,35 @@
+<html>
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+			    	xmlns:h="http://java.sun.com/jsf/html"
+			    	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+			    	xmlns:f="http://java.sun.com/jsf/core"
+			    	xmlns:p="http://primefaces.org/ui"
+			    	template="/layout.xhtml">
+			    
+		<ui:define name="conteudo">	
+		<h:form id="formulario">    		    	
+			<p:dataGrid var="use" value="#{usuarioControle.listaSemAdmin}" columns="5" layout="grid"
+			        rows="10" paginator="true" id="cars"
+			        paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+			        {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+			        rowsPerPageTemplate="5,10,15">
+			         
+			        <f:facet name="header">
+			            Usuarios
+			        </f:facet>
+			 
+			        <p:panel header="#{use.nome}" style="text-align:center">
+			            <h:panelGrid columns="1" style="width:100%">
+			                <img src="#{use.perfil}" style="width:125px; height: 155px;"/>
+			                 		 
+			                <h:outputText value="#{use.cidade.estado.nome}" />
+			 				<p:commandButton value ="Ver Perfil" icon="ui-icon-bookmark" action ="#{usuarioControle.outroPerfil(use)}">
+			 				</p:commandButton>
+			            </h:panelGrid>
+			        </p:panel>
+			 
+			</p:dataGrid>
+		</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

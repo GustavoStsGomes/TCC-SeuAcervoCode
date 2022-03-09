@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		    xmlns:h="http://java.sun.com/jsf/html"
+		    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		    xmlns:f="http://java.sun.com/jsf/core"
+		    xmlns:p="http://primefaces.org/ui">
+		    <ui:decorate template="menuAdmin.xhtml"></ui:decorate>
+	<h:head>
+    	<title>Cidade</title>
+	</h:head> 
+  
+	<h:body>
+		
+	  	<h:form id="formulario">	  	
+		  	<p:panel id="basic" header="Cadastro de Cidade">
+		        <h:panelGrid columns="2" cellpadding="10">
+		        
+		        	<h:outputLabel value =""/>	
+		        	<img src="imagens/logo2.png" style="width:300px;"/>
+		  		
+			  		<h:outputLabel  value="Sigla Estado" />
+			  		<p:autoComplete dropdown="true" value="#{cidadeControle.estado}"
+				 	completeMethod="#{cidadeControle.carregaEstado()}" converter="estadoConverter"
+				 	itemValue="#{estado}" itemLabel="#{estado.sigla}" var="estado"></p:autoComplete>
+			  		
+			  		<h:outputLabel value = "Nome" />
+			  		<p:inputText value = "#{cidadeControle.cidade.nome}" maxlength="45"/>
+			  		
+			  		<p:commandButton value = "Salvar" action ="#{cidadeControle.inserirCidade()}" update="@form"></p:commandButton>
+			  		<p:commandButton value = "Cancelar" action ="#{cidadeControle.cancelar()}"></p:commandButton>
+		            
+		            <br/>
+		            
+		            <p:messages id="messages" closable="true">
+		            </p:messages>
+		            
+		        </h:panelGrid>
+		    </p:panel>
+		    
+		    <p:panel id="grid" header="Lista Cidades">
+	    	
+	    	<p:dataTable var="cid" value="#{cidadeControle.listaCidade}" rows="10" paginator="true"
+           		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} 
+           		{NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                rowsPerPageTemplate="5,10,15" widgetVar="cidTable"
+                 emptyMessage="Nenhuma resposta pra pesquisa">
+	    		    		
+	    		<p:column filterBy="#{cid.estado.sigla}" headerText="Estado Teste" filterMatchMode="exact">
+		            <f:facet name="filter">
+		                <p:selectOneMenu onchange="PF('cidTable').filter()" styleClass="custom-filter">
+		                    <f:selectItem itemLabel="Selecione o Estado" itemValue="#{null}" noSelectionOption="true" />
+		                    <f:selectItems value="#{cidadeControle.carregaEstado()}" />
+		                </p:selectOneMenu>
+		            </f:facet>
+		            <h:outputText value="#{cid.estado.sigla}" />
+		        </p:column>
+	    		
+	    		<p:column headerText="Cidade" filterBy="#{cid.nome}" filterMatchMode="contains">
+	    			<h:outputText value="#{cid.nome}"> </h:outputText>
+	    		</p:column>	 
+	    		  		    		 	    		   	
+	    	</p:dataTable>
+	    	
+	    </p:panel>
+    
+	    </h:form>
+	</h:body>
+</html>
