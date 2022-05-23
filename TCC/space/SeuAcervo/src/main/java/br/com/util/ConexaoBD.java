@@ -32,8 +32,8 @@ public class ConexaoBD {
 		//sempre usar para fazer a tratativa do erro e para apresentar os blocos os erros
 		try{
 			Class.forName("com.mysql.jdbc.Driver");  //gerenciar o banco
-			//conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/SeuAcervo", "root", "putaquepariu"); //endere�o, usuario, senha, porta
-			conexao = DriverManager.getConnection("jdbc:mysql://187.120.153.243:3306/SeuAcervo", "acervous", "putaquepariu"); //endere�o, usuario, senha, porta
+			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/SeuAcervo", "root", ""); //endere�o, usuario, senha, porta
+			//conexao = DriverManager.getConnection("jdbc:mysql://187.120.153.243:3306/SeuAcervo", "acervous", "putaquepariu"); //endere�o, usuario, senha, porta
 			
 		}catch(ClassNotFoundException e){
 			//vai printar o erro, apontando em qual vari�vel est� o erro
